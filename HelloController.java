@@ -48,7 +48,7 @@ public class HelloController {
     @FXML
     private Button deleteButton;
 
-    // ObservableList for storing students
+    
     private ObservableList<Student> studentList = FXCollections.observableArrayList();
 
     @FXML
@@ -113,14 +113,13 @@ public class HelloController {
 
     @FXML
     private void handleDeleteButton() {
-        // Get selected student from TableView
+       
         Student selectedStudent = studentTable.getSelectionModel().getSelectedItem();
 
         if (selectedStudent != null) {
             // Remove from the observable list
             studentList.remove(selectedStudent);
 
-            // Clear input fields
             clearFields();
         }
     }
